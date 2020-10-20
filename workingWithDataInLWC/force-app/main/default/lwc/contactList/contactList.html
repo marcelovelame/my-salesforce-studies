@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Marcelo Velame marcelomsv2009@gmail.com
+  @group             : Salesforce
+  @last modified on  : 10-20-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   10-18-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+    <lightning-card>
+        <template if:true={contacts.data}>
+            <template if:true={errors}>
+                <p>{errors}</p>
+            </template>
+            <lightning-datatable
+                key-field="Id"
+                data={contacts.data}
+                columns={columns}
+            >
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
